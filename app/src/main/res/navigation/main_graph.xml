@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@+id/rssSubscriptionListFragment">
+
+    <fragment
+        android:id="@+id/rssSubscriptionListFragment"
+        android:name="ru.rage.rssreader.presentation.ui.rss.subscriptions.RssSubscriptionListFragment"
+        android:label="RSS-ленты">
+
+        <action
+            android:id="@+id/rssSubscriptionListFragment_to_rssFeedListFragment"
+            app:destination="@+id/rssFeedListFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/rssFeedListFragment"
+        android:name="ru.rage.rssreader.presentation.ui.rss.feeds.RssFeedListFragment"
+        android:label="{title}">
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string"/>
+        <action android:id="@+id/rssFeedListFragment_to_rssFeedFragment"
+            app:destination="@+id/rssFeedFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/rssFeedFragment"
+        android:name="ru.rage.rssreader.presentation.ui.rss.detail.RssFeedDetailFragment">
+        <argument
+            android:name="feed"
+            app:argType="ru.rage.rssreader.presentation.model.RssFeedModel"/>
+    </fragment>
+
+</navigation>

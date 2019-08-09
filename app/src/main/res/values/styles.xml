@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimaryInverse</item>
+        <item name="android:textColorPrimary">@color/textColorPrimaryInverse</item>
+        <item name="android:dialogTheme">@style/DialogTheme</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowMinWidthMajor">50%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+    </style>
+
+    <style name="Text" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textSize">@dimen/text_middle</item>
+    </style>
+
+    <style name="Text.Accent" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/textColorAccent</item>
+    </style>
+
+    <style name="Text.H1">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_high</item>
+    </style>
+    <style name="Text.H2">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_middle</item>
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button">
+        <item name="android:textAppearance">@style/Text.Accent</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <style name="EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textAppearance">@style/Text</item>
+    </style>
+
+</resources>
